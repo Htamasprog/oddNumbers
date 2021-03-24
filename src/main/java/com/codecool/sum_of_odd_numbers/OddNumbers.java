@@ -5,6 +5,8 @@ import java.util.List;
 public class OddNumbers {
 
     public static Integer sum(List<Integer> numbers) {
-        return null;
+        return numbers.stream()
+                .filter(number -> number % 2 != 0)
+                .reduce(0, Integer::sum);
     }
 }
